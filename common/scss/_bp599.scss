@@ -1,0 +1,272 @@
+/*--------------------------------------------------------
+*
+* レスポンシブ CSS (max-width: 599px)
+*
+--------------------------------------------------------*/
+
+@media screen and (max-width: 599px) {
+    .areaSp {
+        height: auto!important;
+    }
+    /* パンくずリスト */
+    .breadcrumb-wrap {
+        padding: 13px 20px;
+        .breadcrumb {
+            padding: 0;
+            li {
+                &:after {
+                    font-size: 12px;
+                }
+                &:last-child:after {
+                    content: '';
+                }
+            }
+            a,
+            span {
+                font-size: 12px;
+                font-weight: 100;
+                color: $bread-color;
+                /*色*/
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    /*---------------------------------------
+    drawer menu ドロワーメニュー
+    ---------------------------------------*/
+    .drawer-menu {
+        .footer-inner {
+            justify-content: flex-start;
+            padding: 14px 20px 60px;
+            overflow-y: scroll;
+            .two-column {
+                margin-top: 0!important;
+                margin-bottom: 16px;
+                .two-column-item {
+                    &:nth-of-type(1) {
+                        justify-content: flex-start;
+                        margin-bottom: 20px !important;
+                    }
+                }
+                .button-footer-list {
+                    flex-wrap: wrap;
+                    .button-list-item {
+                        flex: none;
+                        width: 50%;
+                        &:last-child {
+                            width: 100%;
+                        }
+                        .button-link {
+                            padding: 8px;
+                        }
+                    }
+                }
+            }
+            .three-column {
+                flex-direction: column;
+                gap: 16px;
+                .three-column-item {
+                    width: 100%;
+                    .menu-heading {
+                        margin-bottom: 16px;
+                        padding-bottom: 0;
+                        border: none;
+                        .menu-en tspan {
+                            font-size: 20px;
+                        }
+                        span {
+                            display: block;
+                            margin-left: 15px;
+                        }
+                        &:nth-of-type(2) {
+                            margin-bottom: 12px;
+                        }
+                    }
+                    ul.sub-menu>li.menu-item {
+                        margin-bottom: 12px;
+                        &:last-child {
+                            margin-bottom: 2px;
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        ul.sub-menu>li.menu-item {}
+                    }
+                    &:nth-of-type(3) {
+                        .menu-heading {
+                            margin-bottom: 12px;
+                        }
+                        ul.sub-menu>li.menu-item {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /*---------------------------------------
+    information 最新情報
+    ---------------------------------------*/
+    .information {
+        height: auto!important;
+    }
+    /*---------------------------------------
+    service サービス
+    ---------------------------------------*/
+    .service {
+        height: auto!important;
+        .service-item {
+            flex-direction: column;
+            ul.webiko-list {
+                flex-wrap: nowrap;
+                gap: 6px;
+            }
+        }
+    }
+    /*---------------------------------------
+    recruit リクルート
+    ---------------------------------------*/
+    .recruit {
+        height: auto!important;
+    }
+    /*---------------------------------------
+    company 会社情報
+    ---------------------------------------*/
+    .company {
+        height: auto!important;
+    }
+    /*---------------------------------------
+    footer フッター
+    ---------------------------------------*/
+    .footer-wrap .footer-inner {
+        .two-column .button-footer-list {
+            flex-wrap: wrap;
+            .button-list-item {
+                flex: none;
+                width: 50%;
+                &:last-child {
+                    width: 100%;
+                    a {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        .three-column .three-column-item {
+            width: 100%;
+            .menu-heading {
+                &.kms-group-pc {
+                    display: none;
+                }
+                &.kms-group-sp {
+                    display: block;
+                }
+            }
+        }
+    }
+    /*---------------------------------------
+    *
+    * about CSS (配下ページ、プライバシーポリシーも含む)
+    *
+    ---------------------------------------*/
+    /* 2カラム about */
+    .two-column-about {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+    }
+    /* 2カラム about 企業理念のみ */
+    #management {
+        ul.two-column-about li {
+            flex-direction: column;
+        }
+    }
+    /*---------------------------------------
+    about 共通コンテンツ
+    ---------------------------------------*/
+    .about-page-content {
+        .box {
+            margin-bottom: 13px;
+        }
+    }
+    #privacy-policy {
+        .about-page-content {
+            .box {
+                margin-bottom: 40px;
+                &.signature {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    /*---------------------------------------
+    about 記述リスト・テーブル (dl, table)
+    ---------------------------------------*/
+    /* 基本情報 記述リスト */
+    .list-simple {
+        dl {
+            flex-direction: column;
+            padding: 18px 0;
+            dt {
+                width: 100%;
+                margin-bottom: 18px;
+                text-align: center;
+            }
+            dd {
+                p {
+                    margin-bottom: 12px;
+                    line-height: 1.8;
+                }
+            }
+        }
+    }
+    /* 沿革 テーブル */
+    table.table {
+        tr {
+            display: flex;
+            flex-direction: column;
+            border-top: none;
+            &:last-child {
+                border-bottom: none;
+            }
+            th {
+                width: 100%;
+                padding: 11px;
+                text-align: center;
+            }
+            td {
+                padding: 20px 0;
+            }
+        }
+    }
+    /* about 共通CSS */
+    body.page {
+        .l-wrap {
+            .l-inner {
+                padding: 28px 20px 90px;
+                &.about-main-inner {
+                    padding: 17px 0 150px;
+                }
+            }
+            .source-inner {
+                padding: 28px 20px 90px;
+            }
+        }
+        /*---------------------------------------
+        about company-information 会社情報
+        ---------------------------------------*/
+        .two-column-about {
+            .two-column-item {
+                a .info-title {
+                    padding: 25px 20px;
+                    &::before {
+                        right: 20px;
+                    }
+                    &::after {
+                        right: 26px;
+                    }
+                }
+            }
+        }
+    }
+}

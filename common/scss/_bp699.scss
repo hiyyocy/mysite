@@ -1,0 +1,186 @@
+/*--------------------------------------------------------
+*
+* レスポンシブ CSS (max-width: 699px)
+*
+--------------------------------------------------------*/
+
+@media screen and (max-width: 699px) {
+    /*---------------------------------------
+    *
+    * about CSS (配下ページ、プライバシーポリシーも含む)
+    *
+    ---------------------------------------*/
+    body.about {
+        /* 見出し */
+        h2.content-heading {
+            margin-bottom: 35px;
+            line-height: 1.3;
+            font-size: 30px;
+        }
+        h3.content-heading {
+            margin-bottom: 24px;
+            padding-left: 30px;
+            font-size: 24px;
+            &::before {
+                width: 20px;
+            }
+        }
+        /*---------------------------------------
+        about 下層ページ ページタイトル
+        ---------------------------------------*/
+        .main-title-wrap {
+            margin-top: 73px;
+            .main-title-inner {
+                padding: 0px;
+                h1.page-title {
+                    margin-top: -20px;
+                    padding: 0 30px 15px;
+                    svg {
+                        margin-bottom: 5px;
+                        tspan {
+                            font-size: 20px;
+                        }
+                    }
+                    .title-jn {
+                        font-size: 30px;
+                    }
+                    &::before {
+                        width: calc(100% - 80px);
+                    }
+                    &::after {
+                        left: 8px;
+                    }
+                }
+            }
+        }
+        /*---------------------------------------
+        about ページ内リンクボタン
+        ---------------------------------------*/
+        .page-link-content {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: 30px;
+            padding: 15px 20px 0;
+            gap: 15px;
+            .page-link-button {
+                max-width: 100%;
+                width: 47%;
+                padding: 13px 12px;
+                font-size: 14px;
+                &::before {
+                    position: absolute;
+                    @include icon-item;
+                    content: '\f078';
+                    left: auto;
+                    right: 12px;
+                }
+            }
+        }
+        /*---------------------------------------
+        about 代表挨拶
+        ---------------------------------------*/
+        .massage-wrap .massage-inner {
+            margin-bottom: 68px;
+            .eyecatch-content {
+                height: 575px;
+                margin-bottom: 40px;
+                .eyecatch-box {
+                    left: 0;
+                    img {
+                        position: absolute;
+                        left: calc(-120% - 50px);
+                        width: 240%;
+                        height: 400px;
+                    }
+                }
+                .copy-box {
+                    top: 280px;
+                    width: calc(100% - 20px);
+                    padding: 37px 20px;
+                    .copy-item {
+                        h2.copy-heading {
+                            margin-bottom: 39px;
+                            line-height: 1.6;
+                            font-size: 25px;
+                        }
+                        .name-txt {
+                            .position {
+                                margin-bottom: 14px;
+                                font-size: 16px;
+                            }
+                            .name {
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.member .eyecatch-content {
+                height: 400px;
+                .eyecatch-box {
+                    right: 0;
+                    img {
+                        position: absolute;
+                    }
+                }
+            }
+            .massage-content {
+                padding: 0 20px;
+                .massage-box {
+                    h3.content-heading {
+                        margin-bottom: 30px;
+                        line-height: 1.8;
+                        font-size: 20px;
+                    }
+                }
+                .two-column .two-column-item {
+                    height: auto;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    /*---------------------------------------
+    about 企業理念
+    ---------------------------------------*/
+    .philosophy {
+        &::before {
+            @include filter-img;
+            background-color: rgba($color: #F0F0FD, $alpha: .8);
+            mix-blend-mode: multiply;
+            z-index: -1;
+        }
+        .content {
+            padding: 59px 20px 58px;
+            &::before {}
+            &:nth-of-type(1) {
+                &::before {}
+                p {
+                    line-height: 1.8;
+                    text-align: left;
+                    br {
+                        display: none;
+                    }
+                }
+                p:not(:last-child) {
+                    font-size: 20px;
+                }
+            }
+            &:nth-of-type(2) {}
+            &:nth-of-type(3) {
+                &::before {}
+            }
+            .box {
+                span {}
+                .navy {}
+            }
+            h2.content-heading {
+                .sub-heading {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

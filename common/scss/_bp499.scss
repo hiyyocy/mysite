@@ -1,0 +1,195 @@
+/*--------------------------------------------------------
+*
+* レスポンシブ CSS (max-width: 499px)
+*
+--------------------------------------------------------*/
+
+@media screen and (max-width: 499px) {
+    /* 表示・非表示設定 */
+    .type-pc {
+        display: none;
+    }
+    .type-sp {
+        display: block;
+    }
+    /* 改行 */
+    .br-sp {
+        display: inherit;
+    }
+    /* スペース削除 */
+    .space {
+        display: none;
+    }
+    /* スクロールダウン */
+    .scroll-down {
+        &.mainvisual-item {}
+        .scroll-down-link {
+            img.scroll-txt {}
+            .scroll-arrow {}
+        }
+    }
+    /*---------------------------------------
+    TOP 共通CSS
+    ---------------------------------------*/
+    .l-wrap {
+        .l-inner {
+            padding: 90px 20px 20px;
+            .l-content {
+                .l-description {
+                    margin-bottom: 0;
+                }
+                .l-heading {
+                    padding-left: 0!important;
+                    .heading-en tspan {
+                        font-size: 88px;
+                    }
+                    .heading-jn tspan {}
+                }
+            }
+        }
+    }
+    /*---------------------------------------
+    column 共通カラム
+    ---------------------------------------*/
+    /* 2カラム TOP専用 */
+    .two-column .two-column-item {
+        &:nth-of-type(1) {
+            justify-content: flex-start;
+            height: 178px;
+        }
+        &:last-child {
+            height: auto;
+        }
+    }
+    /*---------------------------------------
+    header ヘッダー
+    ---------------------------------------*/
+    .header-wrap {
+        .header-logo a img {}
+        .nav-wrap {}
+    }
+    /*---------------------------------------
+    main visual メインビジュアル
+    ---------------------------------------*/
+    section {
+        &.mainvisual {
+            video {
+                width: 160%;
+            }
+            .mainvisual-inner {
+                .mainvisual-content {
+                    .mainvisual-item {
+                        &.site-sub-title {}
+                        .site-title-box {
+                            p:nth-of-type(1) {
+                                margin-bottom: 25px;
+                            }
+                            p:nth-of-type(2) {
+                                img {
+                                    width: 80%;
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /*---------------------------------------
+    information 最新情報
+    ---------------------------------------*/
+    .information {
+        .l-heading svg {
+            margin-left: 0;
+        }
+        .two-column {
+            margin-top: -30px;
+            .two-column-item:last-child {
+                margin-top: -40px;
+            }
+        }
+        .l-heading {
+            height: 260px!important;
+             ::before {
+                width: 270px;
+                opacity: .4;
+            }
+        }
+    }
+    /*---------------------------------------
+    business 事業内容
+    ---------------------------------------*/
+    .business .business-list {
+        li.list-item {
+            &:first-child {
+                margin-bottom: 0;
+            }
+        }
+        tspan {
+            font-size: 34px;
+        }
+    }
+    /*---------------------------------------
+    recruit リクルート
+    ---------------------------------------*/
+    .recruit {
+        &.l-wrap .l-inner .l-content {
+            margin-bottom: 40px;
+        }
+        .two-column-item.l-heading {
+            justify-content: flex-start!important;
+        }
+        .recruit-item {
+            flex-direction: column !important;
+            .link-box {
+                max-width: 452px;
+                .link-img {
+                    max-width: 499px;
+                }
+            }
+        }
+    }
+    /*---------------------------------------
+    company 会社情報
+    ---------------------------------------*/
+    .company {
+        .two-column .two-column-item:last-child {
+            max-width: 100%;
+        }
+        .company-list {
+            li.list-item {
+                margin-bottom: 10px;
+                &:nth-of-type(3) {
+                    margin-bottom: 20px;
+                }
+                &:nth-of-type(4) {
+                    margin-bottom: 20px;
+                }
+            }
+            tspan {
+                font-size: 36px;
+            }
+        }
+    }
+    /*---------------------------------------
+    footer フッター
+    ---------------------------------------*/
+    .footer-wrap .footer-inner {
+        padding: 50px 20px;
+        .two-column {
+            margin-bottom: 40px;
+        }
+        .button-footer-list {
+            .button-list-item {
+                &:last-child {}
+            }
+        }
+        .three-column .three-column-item {
+            width: 100%;
+        }
+        .credit-inner .two-column-credit {
+            padding: 15px 20px;
+        }
+    }
+}

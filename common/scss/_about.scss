@@ -1,0 +1,586 @@
+/*---------------------------------------
+*
+* about CSS (配下ページ、プライバシーポリシーも含む)
+*
+---------------------------------------*/
+
+body.page {
+    .l-wrap {
+        height: auto;
+        &::before {
+            z-index: -1;
+        }
+        .l-inner {
+            display: block;
+            padding: 31px 100px 100px;
+            &.about-main-inner {
+                padding: 77px 60px 150px;
+            }
+            &.philosophy {
+                padding: 0;
+            }
+            .l-content {
+                max-width: 990px;
+                margin: 0 auto;
+            }
+        }
+        .source-inner {
+            padding: 15px 100px 100px;
+        }
+    }
+    /* 見出し */
+    .content-heading {
+        font-weight: bold;
+        color: $about-heading;
+        line-height: 1;
+    }
+    h2.content-heading {
+        margin-bottom: 67px;
+        text-align: center;
+        font-size: 40px;
+    }
+    h3.content-heading {
+        position: relative;
+        margin-bottom: 35px;
+        padding-left: 54px;
+        font-size: 30px;
+        &::before {
+            @include bg-vertical-center;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: $about-heading;
+        }
+    }
+    /* ページタイトル SVGサイズ調整 */
+    .chart svg {}
+    .privacy svg {}
+}
+
+
+/*---------------------------------------
+about 共通CSS aboutページ・配下ページ専用CSS 
+---------------------------------------*/
+
+body.about {
+    p,
+    span {
+        color: $main-color;
+    }
+    /* スクロールダウン */
+    .scroll-down {
+        top: auto;
+        left: auto;
+        bottom: 40px;
+        right: 36px;
+        .scroll-down-link {
+            img.scroll-txt {
+                width: 48px;
+            }
+            .scroll-arrow {
+                width: 40px;
+                img {
+                    &:nth-of-type(2) {
+                        margin-top: -20px;
+                    }
+                }
+            }
+        }
+    }
+    /*mainvisual メインビジュアル */
+    .mainvisual {
+        height: 100vh!important;
+        .mainvisual-img img {
+            /* 背景画像 */
+            height: 100vh;
+            object-fit: cover;
+        }
+        .mainvisual-inner {
+            height: 100%;
+            margin-top: 0;
+            h1.page-title {
+                @include bg-center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                padding: 20px;
+                gap: 20px;
+                font-size: 50px;
+                &::before {
+                    @include filter-img;
+                    background-color: rgba($color: $page-about-color, $alpha: .75);
+                    z-index: -1;
+                }
+                svg {
+                    width: 251px;
+                    tspan {
+                        font-size: 25px;
+                    }
+                }
+                .title-jn {
+                    color: white;
+                    font-size: 50px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+
+/*---------------------------------------
+about 下層ページ ページタイトル
+---------------------------------------*/
+
+.main-title-wrap {
+    width: 100%;
+    height: 133px;
+    margin-top: 120px;
+    background: linear-gradient(#215FC1 0%, #215FC1 38%, #E5E3E3 38%, #E5E3E3);
+    .main-title-inner {
+        position: relative;
+        padding: 0 60px;
+        h1.page-title {
+            position: relative;
+            display: inline-block;
+            flex-direction: column;
+            justify-content: center;
+            align-items: baseline;
+            width: auto;
+            margin-top: -10px;
+            padding: 0 20px 20px;
+            gap: 20px;
+            font-size: 50px;
+            z-index: 1;
+            &::before,
+            &::after {
+                @include bg-base;
+                z-index: -1;
+            }
+            &::before {
+                top: 0;
+                left: 50px;
+                width: 100%;
+                height: 100%;
+                background-color: white;
+            }
+            &::after {
+                top: 0;
+                left: -10px;
+                width: 70px;
+                border: {
+                    top: 160px solid white;
+                    bottom: 33px solid transparent;
+                    left: 60px solid transparent;
+                }
+            }
+            svg {
+                tspan {
+                    font-size: 24px;
+                }
+            }
+            .title-jn {
+                position: relative;
+                display: block;
+                color: $main-color;
+                letter-spacing: 3px;
+                font-size: 50px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+
+/*---------------------------------------
+about company-information 会社情報
+---------------------------------------*/
+
+.company-information {
+    background-color: #E2EDFE;
+    h1.page-title {
+        @include bg-center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        gap: 20px;
+        font-size: 50px;
+        &::before {
+            @include filter-img;
+            background-color: rgba($color: $page-about-color, $alpha: .75);
+            z-index: -1;
+        }
+        svg {
+            width: 251px;
+            tspan {
+                font-size: 25px;
+            }
+        }
+        .title-jn {
+            font-size: 50px;
+            font-weight: bold;
+        }
+    }
+    .company-info-list {
+        figure {
+            overflow: hidden;
+        }
+    }
+}
+
+
+/*---------------------------------------
+about ページ内リンクボタン
+---------------------------------------*/
+
+.page-link-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto 60px;
+    padding: 15px 60px 0;
+    gap: 30px;
+    .page-link-button {
+        position: relative;
+        display: block;
+        max-width: 350px;
+        width: 100%;
+        padding: 25px 35px;
+        background-color: #444444;
+        font-size: 20px;
+        transition-duration: .3s;
+        &::before {
+            position: absolute;
+            @include bg-vertical-center;
+            @include icon-item;
+            content: '\f078';
+            left: auto;
+            right: 30px;
+            transition-duration: .3s;
+        }
+    }
+}
+
+
+/*---------------------------------------
+about 共通コンテンツ
+---------------------------------------*/
+
+#privacy-policy p {
+    line-height: 1.8;
+}
+
+.about-page-content {
+    max-width: 1210px;
+    margin: 0 auto;
+    .box {
+        margin-bottom: 77px;
+    }
+    .signature {
+        margin-left: auto;
+        margin-bottom: 0;
+        text-align: right;
+        p {
+            margin-bottom: 46px;
+        }
+        img {
+            width: 200px;
+        }
+    }
+    p {
+        margin-bottom: 30px;
+    }
+    ol {
+        li {
+            position: relative;
+            margin-bottom: 18px;
+            padding-left: 40px;
+            counter-increment: cnt;
+            &::before {
+                position: absolute;
+                left: 9px;
+                content: "(" counter(cnt) ")";
+            }
+            &:nth-of-type(10),
+            &:nth-of-type(11) {
+                &::before {
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/*---------------------------------------
+about 記述リスト・テーブル (dl, table)
+---------------------------------------*/
+
+
+/* 基本情報 記述リスト */
+
+.list-simple {
+    dl {
+        display: flex;
+        padding: 35px 0;
+        border-top: 1px solid $table-line-color;
+        &:last-child {
+            border-bottom: 1px solid $table-line-color;
+        }
+        dt {
+            width: 120px;
+        }
+        dd {
+            .base {
+                font-weight: bold;
+            }
+            p {
+                margin-bottom: 12px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.base-address {
+    margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    /* ボタン */
+    a {
+        position: relative;
+        display: block;
+        width: 250px;
+        padding: 12px 15px;
+        background-color: $about-heading;
+        &::before {
+            position: absolute;
+            @include icon-item;
+            content: '\f054'; //右矢印アイコン
+            right: 12px;
+            width: 16px;
+            height: 16px;
+            font-size: 16px;
+            transition-duration: .3s;
+        }
+    }
+}
+
+.base-address a:hover {
+    &::before {
+        transform: translate(5px);
+    }
+}
+
+
+/* 沿革 テーブル */
+
+table.table {
+    width: 100%;
+    tr {
+        border-top: 1px solid $table-line-color;
+        &:last-child {
+            border-bottom: 1px solid $table-line-color;
+        }
+        th {
+            width: 170px;
+            padding: 31px 40px;
+            background-color: $table-color;
+        }
+        td {
+            padding: 0 40px;
+            vertical-align: middle;
+        }
+    }
+}
+
+
+/*---------------------------------------
+about 企業理念
+---------------------------------------*/
+
+.philosophy {
+    &::before {
+        @include filter-img;
+        background-color: rgba($color: #F0F0FD, $alpha: .8);
+        mix-blend-mode: multiply;
+        z-index: -1;
+    }
+    .content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 91px 100px 83px;
+        background: {
+            repeat: no-repeat;
+            position: center;
+        }
+        &::before {
+            z-index: -2;
+        }
+        &:nth-of-type(1) {
+            &::before {
+                @include filter-img;
+                background: {
+                    image: url('/common/images/about/philosophy_bg_one.jpg');
+                    repeat: no-repeat;
+                    position: center;
+                    size: cover;
+                }
+            }
+            p {
+                line-height: 2;
+                text-align: center;
+            }
+            p:not(:last-child) {
+                margin-bottom: 30px;
+                font-size: 24px;
+            }
+        }
+        &:nth-of-type(2) {
+            background-color: white;
+        }
+        &:nth-of-type(3) {
+            &::before {
+                @include filter-img;
+                background: {
+                    image: url('/common/images/about/philosophy_bg_two.jpg');
+                    repeat: no-repeat;
+                    position: center;
+                    size: contain;
+                }
+            }
+        }
+        .box {
+            max-width: 1210px;
+            span {
+                font-size: inherit;
+            }
+            .navy {
+                color: $about-heading;
+                font-weight: bold;
+            }
+        }
+        h2.content-heading {
+            display: inline-block;
+            .sub-heading {
+                display: block;
+                margin-top: 32px;
+                padding: 11px 19px;
+                background-color: white;
+                border: 2px solid $about-heading;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+
+/*---------------------------------------
+about 代表挨拶
+---------------------------------------*/
+
+.massage-wrap {
+    padding: 15px 0 22px;
+    .massage-inner {
+        margin-bottom: 86px;
+        /* アイキャッチ */
+        .eyecatch-content {
+            position: relative;
+            width: 100%;
+            height: 675px;
+            margin-bottom: 80px;
+            .eyecatch-box {
+                position: relative;
+                left: -60px;
+                img {
+                    width: 100%;
+                    height: 600px;
+                    object-fit: cover;
+                }
+            }
+            .copy-box {
+                position: absolute;
+                top: 280px;
+                left: 0;
+                width: 720px;
+                padding: 80px;
+                background-color: rgba($color: #215FC1, $alpha: .85);
+                .copy-item {
+                    * {
+                        color: white;
+                    }
+                    h2.copy-heading {
+                        margin-bottom: 63px;
+                        font-size: 40px;
+                    }
+                    .name-txt {
+                        span {
+                            display: block;
+                        }
+                        .position {
+                            margin-bottom: 21px;
+                            font-size: 20px;
+                        }
+                        .name {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        /* メッセージ テキスト */
+        .massage-content {
+            padding: 0 100px;
+            .massage-box {
+                max-width: 1210px;
+                margin: 0 auto;
+                h3.content-heading {
+                    margin-bottom: 51px;
+                    padding: 0;
+                    font-size: 30px;
+                    &::before {
+                        content: none;
+                    }
+                }
+                .two-column {
+                    align-items: flex-start;
+                    gap: 60px;
+                    p {
+                        line-height: 1.8;
+                    }
+                }
+            }
+        }
+        &.member {
+            /* アイキャッチ */
+            .eyecatch-content {
+                position: relative;
+                width: 130%;
+                height: 550px;
+                margin-bottom: 80px;
+                .eyecatch-box {
+                    position: relative;
+                    left: auto;
+                    right: -60px;
+                    img {
+                        height: 550px;
+                    }
+                }
+            }
+        }
+    }
+}
